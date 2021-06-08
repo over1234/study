@@ -1,0 +1,25 @@
+#include <stdio.h>
+int main() {
+	int n[1001][1001]={0}; 
+	int i, j, m, t;
+	scanf("%d", &m);
+	int num = 1;
+	for(i = 1; i <= m; i++)
+	{
+		for(j = m; j >= 1; j--)
+		{
+			n[i][j]=num;
+			num = num + 1;
+		}
+		printf("\n");
+	}
+	for(i = 1; i <= m; i++)
+	{
+		for(j = 1; j <= m; j++)
+		{
+			printf("%d ", n[i][j]);
+		}
+		printf("\n");
+	}
+	return 0;
+}
