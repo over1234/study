@@ -1,0 +1,17 @@
+#include<stdio.h>
+int main()
+{
+	int i;
+	char a[101];
+	fgets(a,101,stdin);
+	for(i=0; a[i] != '\0'; i++)
+	{
+		if(a[i] ==' ')
+			;
+		else
+		{
+			printf("%c", a[i]);
+		}
+	}
+	return 0;
+}
