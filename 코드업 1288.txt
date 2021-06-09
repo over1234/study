@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+
+int f(int var)
+{
+	for (int i = var - 1; i >= 1; --i)
+		var *= i;
+	return var;
+}
+
+int main()
+{
+	int n, c, r;
+	cin >> n >> r;
+	c = n - r;
+	if ((f(c) * f(r) != 0)) cout << f(n) / (f(c) * f(r)) << endl;
+	else cout << 1 << endl;
+	return 0;
+}
