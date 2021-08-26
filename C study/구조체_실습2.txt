@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <string.h>
+
+struct student
+{
+	int id;
+	char name[10];
+	double score;
+}classl[30];
+
+int main() {
+	classl[0].id = 1101;
+	
+	strcpy(classl[0].name, "Lee");
+	classl[0].score = 95.3;
+	classl[1].id = 1102;
+	strcpy(classl[1].name, "Kim");
+classl[1].score = 91.8;
+	printf("%d %s %.1f\n", classl[0].id, classl[0].name, classl[0].score);
+	printf("%d %s %.1f\n", classl[1].id, classl[1].name, classl[1].score);
+}

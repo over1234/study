@@ -1,0 +1,61 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+
+int main()
+{
+    srand(time(NULL));
+    int random = 0;
+    int user = 0;
+    int victory = 0;
+		int fall = 0;
+		int ko = 0;
+		int play = 0;
+    printf("\n\n--------------------가위 바위 보 게임-------------------\n\n");
+    printf("                  가위는 1 바위는 2 보는 3                \n\n");
+    printf("               종료를 원하신다면 0을 입력해주세요.         \n\n"); 
+    while (1)
+    {
+			random = rand() % 3 + 1;
+			printf("              가위 바위 보 중에 하나를 입력해주세요. : ");
+      scanf("%d", &user);
+        if(user > 0 && user < 4) // 1~3까지의 수라면?
+        {
+           
+            printf("\n\t\t컴퓨터 : %s\n", (random == 1 ? "가위" : random == 2 ? "바위" : "보"));
+
+            printf("\n\t\tuser : %s\n", (user == 1 ? "가위" : user == 2 ? "바위" : "보"));
+            if (random == user)
+            {
+                printf("\n\n\t\t졌잘사!\n\n");
+								ko++;
+            }
+            else if (random > user)
+            {
+                printf("\n\n\t오늘 운은 그리 안 좋나봐요? 내일 다시 도전해봐요 ^-^\n\n");
+								fall++;
+            }
+            else if (random < user)
+            {
+                printf("\n\n\t행운의 여신이 당신에게 미소를 짖네요. 이대로 gogo!\n\n");
+                victory++;
+            }
+					play++;
+					}
+            else
+            {
+                 if (user == 0)
+                {
+                   printf("\n\n\t\t당신의 전적은?? : %d전 %d승 %d패 %d무\n\n", play, victory, fall, ko);
+                    printf("\n\t\t\t다음에도 즐겨주세요~\n");
+                    break;
+                }
+                printf("\n\n\t\t1~3 사이의 숫자를 입력해주세요!\n\n");
+						}
+     }
+    return 0;
+
+}
+
+

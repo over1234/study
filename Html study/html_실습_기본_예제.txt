@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>홈페이지제목</title>
+</head>
+<body>
+	<img src="images/tangerines.jpg" width="400" height="200" alt="레드향">
+	<h1>레드향</h1>
+	<p>껍질에 붉은 빛이 돌아 <b>레드향</b>이라 불린다.</p>
+	<p>레드향은 <em>한라봉과 귤을 교배</em>한 것으로 <br>일반 귤보다 2~3배 크고, 과육이 붉고 통통하다.</p>
+	<p>비타민 C와 비타민 P가 풍부해<br> <strong>혈액순환, 감기예방</strong> 등에 좋은 것으로 알려져 있다.</p>
+	<a href="http://www.naver.com">네이버로 검색</a>
+	<hr>
+	
+	<ol>
+		<li>아메리카노</li>
+		<li>카페라뗴</li>
+		<li>핫초코</li>
+	</ol>
+	<ol type="A" start="10">
+		<li>녹차</li>
+		<li>홍차</li>
+		<li>차스민차</li>
+	</ol>
+</body>
+</html>

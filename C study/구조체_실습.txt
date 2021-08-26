@@ -1,0 +1,33 @@
+#include <stdio.h>
+
+typedef struct
+{
+	char name[15];
+	int kor; // 국어
+	int eng; // 영어
+	int math; // 수학
+	float avg; // 평균
+} Student;
+
+int main()
+{
+	int i;
+	Student samban[3];
+	
+	for(i = 0; i < 3; i++)
+	{
+		scanf("%s", samban[i].name);
+		scanf("%d",&samban[i].kor);
+		scanf("%d",&samban[i].eng);
+		scanf("%d",&samban[i].math);
+		samban[i].avg = (samban[i].kor + samban[i].eng + samban[i].math) / 3.0;
+	}
+
+	for(i = 0; i < 3; i++)
+	{
+		printf("%s ",samban[i].name);
+		printf("%.1f\n",samban[i].avg);
+	}
+	
+	return 0;
+}
