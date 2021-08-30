@@ -1,0 +1,63 @@
+1. 표준출력
+   출력함수 : print()
+
+# 표준출력1 - 기본적으로 개행('\n')
+# print('Hello World')
+# print('Hello')
+# print('World')
+
+#print option
+#sep
+print('p','e','p','s','i', sep=' ') # 뒤에 붙여야만 함
+
+# 표준출력2
+# print('Hello', end='')
+# print('World')
+
+# 표준출력3
+# print('Hello', 'World')
+# print('Hello' + 'World')
+
+이스케이프 시퀀스(Escape Sequence)
+\와 특정문자를 결합하여 문자를 표시해주는 문자
+
+\ : \ (back slash)
+' : 작은 따옴표(single quotation)
+" : 큰 따옴표(duble quotation)
+\n : 개행(엔터)
+
+2. 표준입력
+입력 함수 : input()
+입력값 = 문자열
+예) x = input('메시지')
+
+정수, 실수 입력
+정수 : int(input('메시지')
+실수 : float(input('메시지')
+형변환 : 정수형 int(), 실수형 float() 함수
+
+나눈 몫과 나머지 연산을 수행하는 프로그램
+
+'f' 스트링 사용하여 출력
+
+# 입력
+x = int(input('첫번째 정수 입력 '))
+y = int(input('두번째 정수 입력 '))
+
+# 연산(몫, 연산 추가)
+print( x, '+' , y , '=' , ( x + y ))
+
+
+print('*'*50)
+
+# f string 사용
+
+            중요
+*print(f'{x} + {y} = {x + y}')*
+
+#회원가입(출력)
+d = input()
+
+print('-' *5, '회원가입', '-' *5)
+print('아이디 : ', id)
+print(f'{id}님, 가입을 환영합니다.')

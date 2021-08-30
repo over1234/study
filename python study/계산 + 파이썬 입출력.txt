@@ -1,0 +1,17 @@
+import os
+
+a = int(input('첫 번쨰 수를 입력해주세요. = '))
+b = int(input('두번쨰 수를 입력해주세요 = '))
+plus = '+'
+minus = '-'
+sum = '*'
+div = '/'
+ahr = '%'
+
+print(a, plus, b, '=', a+b)
+print(a, minus, b, '=', a-b)
+print(a, sum, b, '=', a*b)
+print(a, div, b, '=', a/b)
+print(a, ahr, b, '=', a%b)
+print("Hello Python")
+os.system("Pause")
