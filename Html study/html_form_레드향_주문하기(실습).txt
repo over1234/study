@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레드향 주문하기</title>
+</head>
+<body>
+    <div id ="container" style="width: 480px; margin : 40px auto">
+    <h1>레드향 주문하기</h1>
+    <form>
+     <fieldset>
+        <legend>배송 정보</legend>
+        <ul id="shipping">
+            <li>
+                <label for="user_name">이름</label>
+                <input type="text" id="mail">
+            
+            </li>
+            <li>
+                ,<label for="phone">연락처</label>
+                <input type="tel" id="phone">
+            </li>
+            <li>
+                <label for="d-day">배송 지정</label>
+                <input type="date" id="d-day"> <small>(주문일로부터 최소 3일 이후)</small>
+            </li>
+            <li>
+                <label for="memo">메모</label>
+                <textarea id="memo" cols="40" rows="4"></textarea>
+            </li>
+        </ul>
+     </fieldset>
+     <fieldset>
+         <legend>상품 선택</legend>
+         <p><b>주문할 상품을 선택해 주세요.</b></p>
+         <label>
+             <select>
+                 <option value="special_1" selected>레드향 특</option>
+                <option value="special_2" selected>레드향 상</option>
+                <option value="family_3" selected>레드향 중</option>
+                <option value="family_4" selected>레드향 소</option>
+             </select>
+         </label>
+         <ul>
+            <li>
+                <label><input type="checkbox" value="s_3">선물용 3kg</label>
+                <input type="number" min ="0" max="5">개 (최대 5개)
+            </li>
+            <li>
+                <label><input type="checkbox" value="s_5">선물용 5kg</label>
+                <input type="number" min="0" max="3">개 (최대 3개)
+            </li>
+         </ul>
+     </fieldset>
+
+     <div>
+         <input type="submit" value="주문하기">
+         <input type="reset" value="취소하기">
+     </div>
+    </form>
+
+</div>
+</body>
+</html>
