@@ -1,0 +1,44 @@
+#include <stdio.h>
+
+size_t myStrlen( const char *str);
+int main() {
+	
+	char s[] = "hello world";
+	printf("%d\n", myStrlen(s));
+	return 0;
+}
+size_t myStrlen( const char *str)
+{
+	char *s;
+	for(s = str; *s; s++);
+	return s - str;
+}
+
+// 예제 2
+int main()
+{
+	char *s = "world";
+	int i;
+	printf("%08X %08X %08X %s\n", &s, s, &s[0], s);
+	for(i = 0; s[i] != '\0'; i++)
+	{
+		printf("%08X %c\n", s[i], s[i]);
+	}
+}
+
+//예제3
+void outputArray(int *p, int n);
+int main()
+{
+	int array[3] = {10,20,30};
+	int size = sizeof(array) / sizeof(int);
+	outputArray( array, size);
+}
+void outputArray(int *p, int n)
+{
+	int i;
+	for(i = 0; i < n; i++)
+	{
+		printf("%d %d\n", p[i], *(p+i));
+	}
+}
