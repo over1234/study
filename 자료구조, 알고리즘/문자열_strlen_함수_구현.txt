@@ -1,0 +1,33 @@
+#include <stdio.h>
+int myStrlen( char str[] );
+int myStrlen2( char str[] );
+
+int main() {
+	char s[100];
+	scanf("%s", s );
+	
+	printf("%d\n", myStrlen(s) ); // 문자 길이 
+	printf("%d\n", myStrlen2(s)); // 문자 중 digit의 개수
+	
+	return 0;
+}
+
+int myStrlen( char s[] ){
+	int a = 0;
+	for(int i = 0; s[i] != '\0'; i++) // 배열에서 null 값 전까지 수를 스캔
+	{
+		a++; // null 전까지 i를 1씩 더한다.
+	}
+	return a; // str 반환
+}
+int myStrlen2( char s[] ){
+	int b = 0;
+for(int i = 0; s[i] != '\0'; i++)
+	{
+		if(s[i] >= '0' && s[i] <= '9') // 만약에 문자열 str 중에서 숫자가 있다면
+		{
+			b++; // i 카운트
+		}
+	}
+	return b;
+	}
