@@ -1,0 +1,13 @@
+#include <stdio.h>
+
+int main()
+{
+	char i;
+	char ch[31];
+	scanf("%s", &ch);
+	for (i = 0; ch[i] != '\0'; i++)
+	{
+		printf("\'%c\'\n", ch[i]);
+	}
+	return 0;
+}
