@@ -1,0 +1,53 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+void genRandom( int a[][5], int r );
+void outputArray( int a[][5], int r);
+float averageScore( int *row, int size );
+int main() {
+	
+	int score[4][5], i ;
+	genRandom( score, 4 );
+	outputArray( score, 4 );
+	
+	for( i = 0 ; i < 4 ; i ++ ){
+		printf("선수 %d : %.2f\n", i+1, averageScore( score[i], 5) );
+	}
+	
+	return 0;
+} 
+void genRandom( int a[][5], int r ){
+	int i, j;
+	for( i = 0 ; i < r ; i ++ )
+		for( j = 0 ; j < 5 ; j ++ )
+			a[i][j] =   (rand()%10)+1;// 이 부분에 rand 함수를 이용해 1~10 정수 생성
+}
+void outputArray( int a[][5], int r){
+	int i, j;
+	for( i = 0 ; i < r ; i ++ ){
+		for( j = 0 ; j < 5 ; j ++ )
+			printf("%5d", a[i][j] );
+		printf("\n");
+	}
+}
+float averageScore( int *row, int size ){
+	int i, total = 0, last = 0, max = 0, min = 11;
+	int lasttotal = 0;
+	float avg;
+	for(i = 0; i < size; i++)
+	{
+		if(row[i] > max)
+		{
+			max = row[i];
+		}
+		if(row[i] < min)
+		{
+			min = row[i];
+		}
+		last = max + min;
+		total = row[i] + total;
+		lasttotal = total - last;
+		avg = lasttotal / 3.;
+	}
+	return avg;
+}
