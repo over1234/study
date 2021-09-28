@@ -1,0 +1,51 @@
+#include <stdio.h>
+#include <math.h>
+#define N 5
+typedef struct point{
+	int x,  y;
+}POINT;
+
+void inputPoint( POINT *p );
+void outputPoint( POINT *p );
+double distance( POINT *p, POINT *q);
+
+int main() {
+	int i, minIndx;
+	double d, min = 99999999;
+	POINT p[5];
+	POINT origin = { 0, 0};
+	for(i = 0; i < 5; i++)
+	{
+		inputPoint( p+i );
+	}
+	for(i = 0; i < 5; i++)
+	{
+		outputPoint( p+i );
+	}
+	for(i = 0; i < N; i++){
+    if(min > distance( p+i, &origin) ){
+				min = distance( p+i, &origin);
+				minIndx = min;
+			}
+		}
+	for(i = 0; i < N; i++){
+		if( min == distance( p+i, &origin) ){
+			if( ( p[minIndx].x + p[minIndx].y ) > (p[i].x+p[i].y) )
+				minIndx = i;
+		}
+	}
+	printf("원점에서 가장 가까운 좌표 : ");
+	outputPoint( p + minIndx );
+	return 0;
+}
+void inputPoint( POINT *p){
+		printf("X Y 좌표 입력 : ");
+		scanf("%d %d", &(p -> x),&(p -> y));
+}
+
+void outputPoint( POINT *p ){
+		printf("(   %d,    %d)\n", p -> x, p -> y);
+}
+double distance( POINT *p, POINT *q){
+	return sqrt((((p->x)-(q->x))*((p->x)-(q->x)))+(((p->y)-(q->y))*((p->y)-(q->y))));
+}
