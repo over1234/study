@@ -1,0 +1,36 @@
+package ch02;
+
+public class FunctionTest {
+
+    public static int addNum(int num1, int num2) {
+        return num1 + num2;
+    }
+
+    public static void sayHello(String name) {
+        System.out.println(name + "님 안녕하세요.");
+    }
+
+    public static int calcSum() {
+        int sum = 0;
+        for(int i = 1; i <= 100; i++)
+        {
+            sum = sum + i;
+        }
+        return sum;
+    }
+    public static void main(String[] args) {
+        int sum = 0;
+        int num1 = 10;
+        int num2 = 20;
+        sum = addNum(num1, num2);
+        System.out.println(sum);
+        //이름 + 님 안녕하세요.
+        sayHello("over");
+        //1부터 100까지 더한 결과값을 반환하는 함수
+        sum = calcSum();
+        System.out.println(sum);
+        
+
+      }
+    }
+
