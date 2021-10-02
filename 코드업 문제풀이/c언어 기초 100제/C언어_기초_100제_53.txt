@@ -1,0 +1,8 @@
+#include <stdio.h>
+
+int main(void)
+{
+   int a;
+   scanf("%d", &a);
+   printf("%d", !a); //거짓의 반대, 즉 참인 1로 계산됨
+}
