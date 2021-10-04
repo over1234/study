@@ -1,0 +1,4 @@
+n1 = input()
+n2 = input()
+sum = float(n1) + float(n2)
+print(sum)
