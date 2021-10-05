@@ -1,0 +1,61 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+#define STACK_SIZE 10
+
+typedef char ELEMENT;
+typedef struct Stack{
+	ELEMENT buf[STACK_SIZE];
+	int top;
+}STACK;
+
+void createStack( STACK *s );
+int isFull( STACK *s );
+int isEmpty( STACK *s );
+void Push( STACK *s, ELEMENT data);
+ELEMENT Pop( STACK *s );
+
+int main(){
+	char str[STACK_SIZE];
+	int menu;
+	ELEMENT data;
+	STACK stack;
+	int i;
+	createStack(&stack);
+	printf("문자열 입력 : ");
+	scanf("%s", str);
+	for(i = 0; str[i] != '\0'; i++)
+	{
+		Push(&stack, str[i]);
+	}
+	for(i = stack.top; i != -1 ; i--)
+	{
+		data = Pop(&stack);
+		printf("%c", data);
+	}
+	
+}
+
+void createStack( STACK *s ){
+	s->top = -1;
+}
+int isFull( STACK *s ){
+	return (s->top+1) == STACK_SIZE;
+}
+int isEmpty( STACK *s ){
+	return s->top == -1;
+}
+void Push( STACK *s, ELEMENT data ){
+	if( isFull(s)){
+		printf("stack is full\n");
+		return ;
+	}
+	s->buf[++(s->top) ] = data;
+}
+ELEMENT Pop( STACK *s ){
+	if( isEmpty(s)){
+		printf("stack is empty\n");
+		return 0 ;
+	}
+	return s->buf[ (s->top)-- ];
+}
