@@ -1,0 +1,3 @@
+n1 = input()
+x1 = int(n1)
+print('%X' %x1)
