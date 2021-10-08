@@ -1,0 +1,42 @@
+#include<stdio.h>
+
+int main(){
+
+    int arr[10]; 
+
+    int Min;
+
+    for (int i = 0; i < 3; i++) {
+
+        scanf("%d", &arr[i]);
+
+    }
+
+
+
+    
+    Min = arr[0];
+
+
+
+    for (int i = 0; i < 3; i++) {
+
+         if (Min > arr[i]) {
+
+            Min = arr[i];
+
+        }
+
+    }
+
+
+
+
+
+
+
+    printf("%d", Min);
+
+
+
+}
