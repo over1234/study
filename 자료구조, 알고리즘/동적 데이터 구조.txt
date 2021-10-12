@@ -1,0 +1,33 @@
+// 함수를 활용해 node 동적으로 생성하기
+#include<stdio.h>
+#include<stdlib.h>
+typedef int ELEMENT;
+typedef struct node{
+    ELEMENT data;
+    struct node *next;
+}NODE;
+NODE *createNode( ELEMENT data );
+void printAll( NODE *ptr );
+int main(){
+    NODE *head;
+		NODE *body;
+		NODE *arm;
+    head = createNode( 12 );
+		body = createNode( 99 );
+		arm = createNode( 37 );
+	  head->next = body;
+	  body->next = arm;
+    printAll( head );      
+}
+NODE *createNode( ELEMENT data ){
+    NODE *new = (NODE *)malloc( sizeof(NODE) );
+		new->data = data;
+    new->next = NULL;
+		return new;
+}
+void printAll( NODE *ptr ){
+    while( ptr ){
+        printf("%d\n", ptr->data);
+        ptr = ptr->next;
+    }
+}
