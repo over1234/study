@@ -1,0 +1,30 @@
+import operator
+
+fp = open('/content/정현우 - alibaba.txt', 'r', encoding='utf-8')
+data = fp.read()
+fp.close()
+
+voca = {}
+word_list = data.split()
+
+for i in word_list:
+  if i not in voca:
+    voca[i] = 1
+  else:
+    voca[i] +=1
+
+
+
+meaningless = ['.', ',', '!', '?', 'the', 'he', 'and', 'to', 'a', 'of', 
+               'was', 'in', 'had', 'for', 'it', 'that', 'but', 'as', 'with', 
+               'at', 'i', 'into', 'be', 'this', 'me', 'from', 'then', 'him', 
+               'his', 'her', 'she','they', 'them', 'you', 'am', 'any']
+
+for j in meaningless:
+  del voca[j]
+
+voca_final = sorted(voca.items(), key=operator.itemgetter(1), reverse=True)
+print(voca_final)
+
+for k, v in sorted(voca.items()):
+  print(k, end=' ')
