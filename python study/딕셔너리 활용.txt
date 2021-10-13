@@ -1,0 +1,9 @@
+kakao = {'어피치':43, '네오':54, '라이언':90, '제이지':30, '프로도':80, '콘':83, '무지':45, '튜브':68}
+
+
+while True :
+  st = input('학생 이름은? (quit:q) : ')
+  if st.lower() == 'q' : break
+  elif st in kakao.keys():
+    print(kakao[st], '점')
+  else : print('해당 학생 없음')
