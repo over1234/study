@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>목록을 사용하여 새로 메뉴 만들기</title>
+    <style>
+        a{
+            text-decoration: none;
+        }
+        nav {
+            width: 300px;
+            margin : 50px 30px;
+        }
+        table {
+            caption-side: bottom;
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        td, th {
+            border:1px dotted black;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>부산SW마이스터고</h1>
+    <nav>
+        <ul>
+            <li>
+                <a href="http://school.busanedu.net/bssm-h" >학교 소개</a>
+            </li>
+            <li><a href="https://www.facebook.com/BusanSoftwareMeisterHighschool/">학교 페이스북</a></li>
+            <li><a href="https://www.instagram.com/bssm.hs/">학교 인스타그램</a></li>
+            <li><a href="https://bssm.meistergo.co.kr/">마이스터 인증제</a></li>
+            <li><a href="http://school.busanedu.net/images/web/template/1072/main/1072_link1_3.png">독서종합지원교육시스템</a></li>
+        </ul>
+    </nav>
+    <table>
+        <caption>상품 구성</caption>
+        <thead>
+            <tr>
+                <th>용도</th>
+                <th>중량</th>
+                <th>갯수</th>
+                <th>가격</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td rowspan="2">선물용</td>
+                <th>3kg</th>
+                <th>11~16과</th>
+                <th>35,000원</th>
+            </tr>
+            <tr>
+                <th>5kg</th>
+                <th>18~26과</th>
+                <th>52,000원</th>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
