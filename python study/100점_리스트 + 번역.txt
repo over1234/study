@@ -1,0 +1,21 @@
+import string
+from googletrans import Translator
+
+fp = open('/content/100점_단어.txt', 'r', encoding='utf-8')
+data = fp.read()
+fp.close()
+word = data.split('\n')
+
+
+
+a = string.ascii_lowercase
+dic = dict(zip(a, range(1, 27)))
+count = 0
+
+for w in word:
+  sum = 0
+  for i in w:
+    sum += dic[i]
+  if sum ==  100:
+    count += 1
+    print(count, w, Translator().translate(w, dest='ko').text, sum)
