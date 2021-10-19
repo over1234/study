@@ -1,0 +1,12 @@
+#include <stdio.h>
+
+int main()
+{
+   int i,b;
+scanf("%X",&b);
+for(i=1;i<16;i++)
+{
+printf("%X*%X=%X\n",b,i ,b*i);
+}
+   return 0; 
+}
