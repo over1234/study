@@ -1,0 +1,3 @@
+a = int(input())
+mul = a * 2
+print(mul)
