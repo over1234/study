@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int main()
+{
+	long long int h, b, c, s;
+	double o;
+	
+	scanf("%lld %lld %lld %lld", &h, &b, &c, &s);
+	o = h * b * c * s;
+	
+	printf("%.1lf MB", o / 8388608);
+
+	return 0;
+
+
+}
