@@ -19,7 +19,7 @@ public class Customer {
     protected double salesRatio;
 
     public void calcPrice(int price) {
-        bounsPoint += (int)(price * bounsPoint);
+        bounsPoint += (int)(price * bounsRatio);
         System.out.println(price + "물건을 구매시 " + (price-(int)(price*salesRatio)) + "원을 지불합니다.");
         System.out.println(bounsPoint + "원 적립 됩니다.");
     }
