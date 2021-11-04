@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>선형 그라데이션</title>
+    <style>
+        li {
+            display: inline-block;
+            width: 300px;
+            height: 200px;
+            border-radius: 10px;
+        }
+        .grad1 {
+            background: blue;
+            background: linear-gradient(to right bottom, white, blue);
+
+        }
+        .grad2 {
+            background: #f00;
+            background: linear-gradient(45deg, #f00, #fff);
+        }
+        .grad3 {
+            background: #06f;
+            background: linear-gradient(to bottom, #06f,white 30%, #06f);
+        }
+
+        #div1 {
+            background: darkgreen;
+            background: radial-gradient(circle closest-side at 30% 40%, white, yellow, green);
+
+        }
+        #div2 {
+            background: darkgreen;
+            background: radial-gradient(circle closest-corner at 30% 40%, white, yellow, green);
+            
+        }
+        #div3 {
+            background: darkgreen;
+            background: radial-gradient(circle farthest-side at 30% 40%, white, yellow, green);
+            
+        }
+        #div4 {
+            background: darkgreen;
+            background: radial-gradient(circle farthest-corner at 30% 40%, white, yellow, green);
+            
+        }
+
+        .radial1 {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background: blue;
+            background: radial-gradient(circle at 20% 20%, white, blue);
+        }
+
+        .repeat1 {
+            background: red;
+            background: repeating-linear-gradient(yellow, red 20px);
+        }
+
+        .repeat2 {
+            background: #ccc;
+            background: repeating-radial-gradient(circle, white, #ccc 10%);
+        }
+    </style>
+</head>
+<body>
+    <h3>1. 선형 그라데이션</h3>
+    <ul>
+        <li class="grad1">왼쪽에서 오른쪽으로 아래방향</li>
+        <li class="grad2">45도 방향으로</li>
+        <li class="grad3">위에서부터 30% 위치에 색상 중지점</li>
+    </ul>
+    <h3>2. 원형 그라데이션</h3>
+    <ul>
+        <li id="div1">중심에서 가장 가까운 측면에 닿을 떄까지</li>
+        <li id="div2">중심에서 가장 가까운 꼭짓점에 닿을 떄까지</li>
+        <li id="div3">중심에서 가장 멀리 떨어진 측면에 닿을 떄까지</li>
+        <li id="div4">중심에서 가장 멀리 떨어진 꼭짓점에 닿을 떄까지</li>
+    </ul>
+    <h3>3.위치키워드를 사용한 원형 그라데이션 만들기</h3>
+    <div class="radial1"></div>
+    <h3>4.그라데이션 반복하기</h3>
+    <ul>
+        <li class="repeat1"></li>
+        <li class="repeat2"></li>
+    </ul>
+</body>
+</html>

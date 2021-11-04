@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CSS display 속성</title>
+    <style>
+       * {
+           box-sizing: border-box;
+       }
+       nav ul {
+           list-style: none;
+       }
+       nav ul li {
+           display: inline-block;
+           padding: 20px;
+           margin: 0 20px;
+           border: 1px solid #222;
+       }
+       img {
+           float: left;
+           margin-right: 40px;
+           border: 1px solid blck;
+       }
+       div {
+           padding: 20px;
+           margin: 10px;
+       }
+       #box1{
+           background: yellow;
+           float: left;
+       }
+       #box2{
+           background: lightyellow;
+           float: left;
+       }
+       #box3{
+           background: greenyellow;
+           
+       }
+       #box4{
+           background: mediumslateblue;
+           clear: left;
+       }
+    </style>
+</head>
+
+<body>
+    <h2>1. 블록요소 li를 인라인 요소로 변환해 메뉴만들기</h2>
+    <nav>
+        <ul>
+            <li>menu 1</li>
+            <li>menu 2</li>
+            <li>menu 3</li>
+            <li>menu 4</li>
+        </ul>
+    </nav>
+    <br>
+    <h2>2.float 사용하여 이미지 왼쪽으로 배치하기 </h2>
+    <img src="images/activity.jpg">
+    <p>Ex et adipisicing voluptate aliqua cupidatat
+        nulla. Laboris est sint sit aliqua enim.
+        Aute Lorem eu sint aute sunt proident.
+        Do culpa consectetur elit duis laboris
+        reprehenderit incididunt nulla.
+        Irure exercitation tempor aliqua laboris
+        cupidatat anim in non officia aliquip
+        excepteur fugiat labore.</p>
+    <p>Lorem ipsum reprehenderit adipisicing exercitation
+        enim velit veniam incididunt sit consectetur elit
+        exercitation. Commodo veniam sit quis nisi ea.
+        Ipsum do aliqua nostrud laboris elit duis adipisicing
+        id Lorem qui. Labore dolor ipsum enim incididunt.
+        Velit qui cillum sunt labore incididunt duis aute
+        Lorem nulla et. Sint commodo aute amet laboris
+        ullamco exercitation Lorem dolore veniam ut
+        reprehenderit incididunt. Laborum nulla eiusmod
+        cillum irure anim aute.</p>
+    <p>Excepteur voluptate ad irure ipsum duis. Deserunt
+        cupidatat commodo proident eu mollit cillum commodo
+        quis quis et ad. Incididunt adipisicing enim laboris
+        voluptate.</p>
+    <p></p>
+    <h2>3. float팅 적용하여 메뉴만들기</h2>
+    <div id="#box1">박스1</div>
+    <div id="#box2">박스2</div>
+    <div id="#box3">박스3</div>
+    <div id="#box4">박스4</div>
+</body>
+
+</html>
