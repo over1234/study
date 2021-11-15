@@ -1,0 +1,19 @@
+#날짜 데이터 추출하기
+import csv
+
+f = open('/content/databasic/01/busan1.csv')
+data = csv.reader(f)
+data
+next(data)
+result = []
+
+for row in data :
+    if row[-1] != '' :
+      if 2005 <= int(date[0]) :
+        if row[0].split('-')[1] == '06' and row[0].split('-')[2] == '16' :
+            result.append(float(row[-1]))
+
+import matplotlib.pyplot as plt
+plt.figure(dpi = 300)
+plt.plot(result, 'hotpink')
+plt.show()
