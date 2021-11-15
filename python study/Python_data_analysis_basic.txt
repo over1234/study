@@ -1,0 +1,23 @@
+import csv
+
+f = open('/content/databasic/01/busan1.csv')
+data = csv.reader(f)
+next(data)
+high = [] # 최고 기온 값을 저장할 리스트 high 생성
+low = [] # 최저 기온 값을 저장할 리스트 low 생성
+
+for row in data :
+    if row[-1] != '' and row[-2] != '' : # 최고 기온 값과 최저 기온 값이 존재한다면
+        date = row[0].split('-') # 날짜 값을 – 문자를 기준으로 구분하여 저장
+        if 1983 <= int(date[0]) : # 1983년 이후 데이터라면
+            if date[1] == '02' and date[2] == '14' : # 2월 14일이라면
+                high.append(float(row[-1])) # 최고 기온 값을 high 리스트에 저장
+                low.append(float(row[-2])) # 최저 기온 값을 low 리스트에 저장
+
+plt.rc('font', family = 'NanumGothic') # 나눔 고딕을 기본 글꼴로 설정
+plt.rcParams['axes.unicode_minus'] = False # 마이너스 기호 깨짐 방지
+plt.title('내 생일의 기온 변화 그래프') # 제목 설정
+plt.plot(high, 'hotpink', label = 'high') # high 리스트에 저장된 값을 hotpink 색으로 그리고 레이블을 표시
+plt.plot(low, 'skyblue', label = 'low') # low 리스트에 저장된 값을 skyblue 색으로 그리고 레이블을 표시
+plt.legend() # 범례 표시
+plt.show() # 그래프 나타내기
