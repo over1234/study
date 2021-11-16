@@ -1,0 +1,40 @@
+#include<stdio.h>
+
+void preorder(int n, char* t, int size) {
+
+	if (n > size || t[n] == 0) {
+		return;
+	}
+	printf("%c", t[n]);
+	preorder(2 * n, t, size);
+	preorder(2 * n + 1, t, size);
+}
+void inorder(int n, char* t, int size) {
+
+	if (n > size || t[n] == 0) {
+		return;
+	}
+	inorder(2 * n, t, size);
+	printf("%c", t[n]);
+	inorder(2 * n + 1, t, size);
+}
+void postorder(int n, char* t, int size) {
+
+	if (n > size || t[n] == 0) {
+		return;
+	}
+	postorder(2 * n, t, size);
+	postorder(2 * n + 1, t, size);
+	printf("%c", t[n]);
+}
+int main() {
+	char tree[] = { 0,'A', 'B', 'C', 'D', 'E', 'F', 'G', 0, 0,'H', 'I', 0, 'J', 'K', 'L' };
+	int size = 16;
+	printf("\n<<전위 탐색>>\n");
+	preorder(1, tree, size);
+	printf("\n<<중위 탐색>>\n");
+	inorder(1, tree, size);
+	printf("\n<<후위 탐색>>\n");
+	postorder(1, tree, size);
+
+}
